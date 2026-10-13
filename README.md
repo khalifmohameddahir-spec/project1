@@ -1,1 +1,1 @@
-# ijgsb
+# Python bsics
