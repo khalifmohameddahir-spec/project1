@@ -25,7 +25,7 @@ else:
 
 """
 
-
+"""
 t = float(input("Enter the value of T:"))
 s = float(input("Enter the value of S:"))
 
@@ -69,12 +69,15 @@ if g < 20:
     else:
         print("g is equals to 20")
 
+"""
 
 
+m = float(input("enter the value of k"));
+n = float(input("enter the value of z"));
 
-
-
-
-
+if m > n :
+    print("m is greater than n");
+else:
+    print("m is less than n");
 
 
