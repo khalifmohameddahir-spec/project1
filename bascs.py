@@ -103,8 +103,8 @@ f) exponentiation assignment
 g) floor division assignment
 h) bitwise AND assignment
 i) bitwise OR assignment
-
 """
+
 height = 99
 length = 12
 
@@ -151,11 +151,13 @@ print(myAdd, mySub, myMul, myDiv, myMod, myExp, myFloorDiv, myBitwiseAnd, myBitw
 
 
 #Logical Operations
+
 """
 a) and
 b) or
 c) not
 """
+
 x = 12
 y= 5
 print(x > 10 and y < 10)
@@ -166,7 +168,7 @@ print(not (x > 10))
 x = [1, 2, 3, 4, 5]
 print(x)
 
-"""
+
 x.append(6)
 x.extend([7, 8, 9])
 x.index(3)
@@ -174,8 +176,8 @@ x.insert(2, 10)
 x.sort()
 x.remove(2)
 print(x)
-"""
-"""
+
+
 y=["apple", "banana", "cherry"]
 print(y)
 
@@ -186,10 +188,9 @@ y.insert("Watermelon")
 y.remove("banana")
 y.sort()
 print(y)
-"""
+
 #List
 x = [10, 2, 13, 4, 5]
-"""
 
 x = x.append(6)
 x = x.extend([7, 8, 9])
@@ -221,7 +222,7 @@ x.count()
 x.pop()
 x.reverse()
 
-"""
+
 
 y=["apple", "banana", "cherry"]
 y.append("pineapple");
@@ -290,7 +291,7 @@ print(my_dict)
 
 
 #conditions
-"""
+
 a = 9
 b = 9
 
@@ -299,9 +300,9 @@ if a > b:
 elif a == b:
     print("a is equals to b")
 else:
-    print("a is less than b
+    print("a is less than b")
 
-"""
+
 t = float(input("Enter the value of T:"))
 s = float(input("Enter the value of S:"))
 
@@ -344,6 +345,500 @@ if g < 20:
         print("g is less than 20")
     else:
         print("g is equals to 20")
+
+#Looping of a list
+fruits = ["apple", "Banana", "cherry"]
+
+for j in fruits:
+    print(j)
+"""
+"""
+for f in fruits:
+    print(f, end=",")
+"""
+"""
+#Looping of a set
+mesa = set((1, 2, 3, 4, 5 , ""))
+mesa1 = {"Banana", "Oranges ", "Mango "}
+
+for i in mesa:
+    print(i, end=",")
+    print()
+    for x in mesa1:
+        print(x, end=",")
+"""
+#Looping for dictionaries
+
+
+my_dict = {
+    "name": "Omwami",
+    "Age": 30,
+    "Address": 254,
+    "Location": "Bondo",
+    "Status": "Mingling"
+}
+
+for y in my_dict:
+    print(y, end=",")
+
+
+my_dict1 ={"name":"akoo", "address": "siaya"}
+for h in my_dict1:
+    print(h, end=",")
+
+
+
+#banks
+
+def bank_account(name, account_number, deposit, branch):
+    """Return a formatted account summary string."""
+    return f"Name= {name}, Account= {account_number}, Deposit= {deposit}, Branch = {branch}"
+
+
+def main():
+    name = input("Enter your full names: ")
+    account_number = int(input("Enter your account number: "))
+    deposit = float(input("Enter the amount to deposit into your account: "))
+    branch = input("Enter the name of the Bank branch: ")
+    my_account = bank_account(name, account_number, deposit, branch)
+    print(my_account)
+
+
+if __name__ == "__main__":
+    main()
+
+
+
+#alarms
+
+import time
+
+def set_alarm():
+    hours = int(input("Enter the hours: "))
+    minutes = int(input("Enter the minutes: "))
+    if not 0 <= hours <= 23:
+        raise ValueError("Hours must be between 0 and 23.")
+    if not 0 <= minutes <= 59:
+        raise ValueError("Minutes must be between 0 and 59.")
+    return hours, minutes
+
+
+def check_time(alarm_time):
+    while True:
+        current_time = time.localtime()
+        if (current_time.tm_hour, current_time.tm_min) == alarm_time:
+            print("It's time to wake up!")
+            return
+        time.sleep(1)
+
+
+def alarm_clock():
+    print("Welcome to alarm clock")
+    alarm_time = set_alarm()
+    print(f"Alarm set for {alarm_time[0]:02d}:{alarm_time[1]:02d}")
+    check_time(alarm_time)
+
+
+if __name__ == "__main__":
+    alarm_clock()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
