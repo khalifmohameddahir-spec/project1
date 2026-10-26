@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Spider Webs</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: white;
+            overflow: hidden;
+        }
+
+        svg {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .web {
+            animation: floating 5s infinite ease-in-out;
+            transform-box: fill-box;
+            transform-origin: center;
+        }
+
+        @keyframes floating {
+            0% {
+                transform: rotate(0deg) scale(1);
+            }
+
+            50% {
+                transform: rotate(8deg) scale(1.08);
+            }
+
+            100% {
+                transform: rotate(0deg) scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<svg viewBox="0 0 900 600">
+
+    <defs>
+        <g id="web" stroke="black" stroke-width="2" fill="none">
+
+            <path d="
+            M0 0 L0 -65
+            M0 0 L46 -46
+            M0 0 L65 0
+            M0 0 L46 46
+            M0 0 L0 65
+            M0 0 L-46 46
+            M0 0 L-65 0
+            M0 0 L-46 -46
+            " />
+
+            <polygon points="0,-20 14,-14 20,0 14,14 0,20 -14,14 -20,0 -14,-14"/>
+
+            <polygon points="0,-40 28,-28 40,0 28,28 0,40 -28,28 -40,0 -28,-28"/>
+
+            <polygon points="0,-60 42,-42 60,0 42,42 0,60 -42,42 -60,0 -42,-42"/>
+
+        </g>
+    </defs>
+
+    <use href="#web" x="120" y="100" class="web"/>
+    <use href="#web" x="350" y="160" class="web"/>
+    <use href="#web" x="600" y="100" class="web"/>
+    <use href="#web" x="780" y="240" class="web"/>
+    <use href="#web" x="180" y="350" class="web"/>
+    <use href="#web" x="430" y="400" class="web"/>
+    <use href="#web" x="680" y="450" class="web"/>
+
+    <circle r="6" fill="black">
+        <animateMotion
+            dur="5s"
+            repeatCount="indefinite"
+            path="M120,100 L350,160 L600,100 L780,240 Z"/>
+    </circle>
+
+</svg>
+
+</body>
+</html>
